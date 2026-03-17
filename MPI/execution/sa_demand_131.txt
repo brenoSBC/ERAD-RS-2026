@@ -1,0 +1,83 @@
+======================================
+Pattern: 1,3,1 | NP: 5
+======================================
+Run 1 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.34492110 sec.
+  Throughput   : 10891.88010771 msg/sec.
+[1m================
+[0m
+Run 2 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.37706633 sec.
+  Throughput   : 10844.41923112 msg/sec.
+[1m================
+[0m
+Run 3 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.10903941 sec.
+  Throughput   : 11253.27845419 msg/sec.
+[1m================
+[0m
+Run 4 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.23248704 sec.
+  Throughput   : 11061.20198760 msg/sec.
+[1m================
+[0m
+Run 5 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.39336685 sec.
+  Throughput   : 10820.51001184 msg/sec.
+[1m================
+[0m
+Run 6 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.38674133 sec.
+  Throughput   : 10830.21543367 msg/sec.
+[1m================
+[0m
+Run 7 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.31746041 sec.
+  Throughput   : 10932.75474542 msg/sec.
+[1m================
+[0m
+Run 8 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.16282894 sec.
+  Throughput   : 11168.77153223 msg/sec.
+[1m================
+[0m
+Run 9 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.24209837 sec.
+  Throughput   : 11046.52213912 msg/sec.
+[1m================
+[0m
+Run 10 / 10
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source][0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.33382107 sec.
+  Throughput   : 10908.36540164 msg/sec.
+[1m================
+[0m
