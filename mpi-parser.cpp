@@ -14,7 +14,10 @@ void save_throughput(
     for (int i = 0; i < config.size(); ++i)
     {
         std::ofstream write(write_file + name + "-" + config[i] + "-throughput.txt");
-        std::ifstream read(read_file + "-" + config[i] + ".txt");
+
+        std::ifstream read(read_file + name + "_" + config[i] + ".txt");
+        std::cout << read_file << name << "_" << config[i] << ".txt" << std::endl;
+        if (!read.is_open()) throw std::runtime_error("Error opening input file");
 
         while (std::getline(read, line))
         {
@@ -34,13 +37,16 @@ void save_throughput(
 
 int main(void)
 {
-    std::string read_file = "./MPI/executions/";
+    std::string read_file = "./MPI/execution/";
     std::string write_file = "./MPI/mpi_throughput/";
 
     std::vector<std::string> three_operator_config = {"111", "121", "131", "141", "161", "181"};
     std::vector<std::string> four_operator_config = {"1111", "1221", "1331", "1441", "1641", "1861"};
 
-    save_throughput("FD", read_file, write_file, three_operator_config);
+    save_throughput("fd_demand", read_file, write_file, three_operator_config);
+    save_throughput("sa_demand", read_file, write_file, three_operator_config);
+    save_throughput("sd_demand", read_file, write_file, four_operator_config);
+    save_throughput("tm_demand", read_file, write_file, four_operator_config);
 
     return 0;
 }
