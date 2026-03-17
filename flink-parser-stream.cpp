@@ -111,7 +111,6 @@ int main(void)
     std::string sd_source_csv = "SensorParser-emitted.csv";
     std::string tm_source_csv = "BeijingTaxiParser-emitted.csv";
 
-
     std::vector<std::string> three_operator_config = {"111", "121", "131", "141", "161", "181"};
     std::vector<std::string> four_operator_config = {"1111", "1221", "1331", "1441", "1641", "1861"};
 
