@@ -42,7 +42,7 @@ datasets = [
             [],
             [],
             [],
-            [],
+            []
         ]
     },
     {
@@ -157,4 +157,3 @@ def mean_std(data):
 for dataset in datasets:
         for system in ["openmpi", "resipipe", "flink"]: 
             dataset[f"{system}_mean"], dataset[f"{system}_std"] = mean_std(dataset[system])
-
