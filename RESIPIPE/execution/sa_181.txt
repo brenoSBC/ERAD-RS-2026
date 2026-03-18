@@ -1,0 +1,103 @@
+======================================
+Pattern: 1,8,1 | NP: 10
+======================================
+Run 1 / 10
+[gmapflink01:2333048] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:14:16 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.45585420 sec.
+  Throughput   : 10729.82354686 msg/sec.
+[1m================
+[0m
+Run 2 / 10
+[gmapflink01:2333082] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:14:25 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 8.12417333 sec.
+  Throughput   : 9847.15573274 msg/sec.
+[1m================
+[0m
+Run 3 / 10
+[gmapflink01:2333108] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:14:35 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.68229596 sec.
+  Throughput   : 10413.55350502 msg/sec.
+[1m================
+[0m
+Run 4 / 10
+[gmapflink01:2333134] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:14:44 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 6.95543026 sec.
+  Throughput   : 11501.80463458 msg/sec.
+[1m================
+[0m
+Run 5 / 10
+[gmapflink01:2333160] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:14:53 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.47086918 sec.
+  Throughput   : 10708.25871428 msg/sec.
+[1m================
+[0m
+Run 6 / 10
+[gmapflink01:2333186] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:15:02 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 6.84786701 sec.
+  Throughput   : 11682.46986395 msg/sec.
+[1m================
+[0m
+Run 7 / 10
+[gmapflink01:2333212] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:15:11 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.00825548 sec.
+  Throughput   : 11415.10897740 msg/sec.
+[1m================
+[0m
+Run 8 / 10
+[gmapflink01:2333238] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:15:20 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.56467782 sec.
+  Throughput   : 10575.46691953 msg/sec.
+[1m================
+[0m
+Run 9 / 10
+[gmapflink01:2333272] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:15:29 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.32428906 sec.
+  Throughput   : 10922.56181380 msg/sec.
+[1m================
+[0m
+Run 10 / 10
+[gmapflink01:2333298] Warning: could not find environment variable "LD_LIBRARY_PATH"
+Tue Mar 17 18:15:38 2026 [36mINFO[0m Clearing logs
+[36mDSPB-INFO[0m message or time limit not specified.
+[1;34m[Source] Rank 0:[0m
+  Processed    : 80000 msg.
+  Elapsed time : 7.47147663 sec.
+  Throughput   : 10707.38810282 msg/sec.
+[1m================
+[0m
