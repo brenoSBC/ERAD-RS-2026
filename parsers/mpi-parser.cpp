@@ -38,8 +38,8 @@ void save_throughput(
 
 int main(void)
 {
-    std::string read_file = "../MPI/execution/";
-    std::string write_file = "../MPI/mpi_throughput/";
+    std::string read_file = "./MPI/execution/";
+    std::string write_file = "./MPI/mpi_throughput/";
 
     std::vector<std::string> three_operator_config = {"111", "121", "131", "141", "161", "181"};
     std::vector<std::string> four_operator_config = {"1111", "1221", "1331", "1441", "1641", "1861"};

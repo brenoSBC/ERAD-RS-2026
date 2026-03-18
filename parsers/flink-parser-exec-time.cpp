@@ -75,10 +75,10 @@ int main(void)
     size_t sd_workload = 80000;
     size_t tm_workload = 75000;
 
-    std::string fd_read_file = "../FLINK/execution/frauddetection-";
-    std::string sa_read_file = "../FLINK/execution/sentimentanalysis-";
-    std::string sd_read_file = "../FLINK/execution/spikedetection-";
-    std::string tm_read_file = "../FLINK/execution/trafficmonitoring-";
+    std::string fd_read_file = "./FLINK/execution/frauddetection-";
+    std::string sa_read_file = "./FLINK/execution/sentimentanalysis-";
+    std::string sd_read_file = "./FLINK/execution/spikedetection-";
+    std::string tm_read_file = "./FLINK/execution/trafficmonitoring-";
 
     std::string write_file = "../FLINK/flink_throughput_exec_time/";
 

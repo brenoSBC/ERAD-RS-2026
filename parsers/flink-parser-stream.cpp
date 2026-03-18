@@ -101,8 +101,8 @@ int main(void)
     size_t sd_workload = 80000;
     size_t tm_workload = 75000;
 
-    std::string read_file = "../FLINK/stream/";
-    std::string write_file = "../FLINK/flink_throughput_stream/";
+    std::string read_file = "./FLINK/stream/";
+    std::string write_file = "./FLINK/flink_throughput_stream/";
 
     std::string sink_csv = "ConsoleSink-received.csv";
 

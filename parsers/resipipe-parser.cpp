@@ -38,8 +38,8 @@ void save_throughput(
 
 int main(void)
 {
-    std::string read_file = "../RESIPIPE/execution/";
-    std::string write_file = "../RESIPIPE/resipipe_throughput/";
+    std::string read_file = "./RESIPIPE/execution/";
+    std::string write_file = "./RESIPIPE/resipipe_throughput/";
 
     std::vector<std::string> three_operator_config = {"111", "121", "131", "141", "161", "181"};
     std::vector<std::string> four_operator_config = {"1111", "1221", "1331", "1441", "1641", "1861"};
