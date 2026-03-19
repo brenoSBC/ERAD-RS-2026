@@ -28,38 +28,57 @@ TM = {
     "flink": []
 }
 
+apps = {
+    "FD": FD,
+    "SA": SA,
+    "SD": SD,
+    "TM": TM
+}
+
 def read_file(path):
   lines = []
 
-    with open(path, "r") as file:
+  with open(path, "r") as file:
         for line in file:
             line = line.strip()
 
             if line != "":
                 lines.append(float(line))
     
-    return lines
+  return lines
 
 def populate(app, app_name):
 
     for p in app["patterns"]:
 
+        # FLINK
+        path = f"./FLINK/flink_throughput_stream/{app_name}-{p}-throughput.txt"
+        app["flink"].append(read_file(path))
+
         # OPENMPI
-        path = f"mpi_throughput/{app_name()}-{p}-throughput.txt"
+        path = f"./MPI/mpi_throughput/{app_name}-{p}-throughput.txt"
         app["openmpi"].append(read_file(path))
 
         # RESIPIPE
-        path = f"resipipe_throughput/{app_name()}-{p}-throughput.txt"
+        path = f"./RESIPIPE/resipipe_throughput/{app_name}-{p}-throughput.txt"
         app["resipipe"].append(read_file(path))
-
-        # FLINK
-        path = f"flink_throughput/{app_name()}-{p}-throughput.txt"
-        app["flink"].append(read_file(path))
-
 
 populate(FD, "FD")
 populate(SA, "SA")
 populate(SD, "SD")
 populate(TM, "TM")
 
-print(FD["openmpi"][0])
+frameworks = ["flink", "openmpi", "resipipe"]
+
+for name, app in apps.items():
+    print(f"\n=== {name} ===")
+    
+    for fw in frameworks:
+        print(f"\n--- {fw} ---")
+        
+        for i in range(len(app["patterns"])):
+            pattern = app["patterns"][i]
+            data = app[fw][i]
+            
+            print(f"{pattern}: {data}")
+
