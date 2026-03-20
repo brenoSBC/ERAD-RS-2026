@@ -1,12 +1,52 @@
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
+
+COLORS = {
+    "openmpi": "#7CDE28",
+    "resipipe": "#159CEB",
+    "flink": "#F57C25",
+}
+
+BACK_COLORS = {
+    "openmpi": "#baffc9",
+    "resipipe": "#bae1ff",
+    "flink": "#ffdfba",
+}
+
+ERROS_COLORS = {
+    "openmpi": "#78CC2F",
+    "resipipe": "#0766F5",
+    "flink": "#F0501A" ,
+}
+
+HATCHES = {
+    "openmpi": "//////\\\\\\\\\\\\",
+    "resipipe": "//////\\\\\\\\\\\\",
+    "flink": "//////\\\\\\\\\\\\",
+}
+
+DISPLAY_NAMES = {
+    "openmpi": "OpenMPI",
+    "resipipe": "ResiPipe",
+    "flink": "Flink",
+}
 
 def apply():
     plt.rcParams.update({
-        "font.family": "serif",
-        "font.size": 14,
-        "axes.labelsize": 18,
-        "xtick.labelsize": 14,
-        "ytick.labelsize": 14,
-        "legend.fontsize": 14,
-        "axes.linewidth": 1.2
+        "font.family": "DejaVu Serif",
+        "font.serif": ["Times New Roman"],
+        "font.size": 17,
+        "axes.titlesize": 17,
+        "axes.labelsize": 17,
+        "legend.fontsize": 17,
+        "xtick.labelsize": 17,
+        "ytick.labelsize": 17,
+        "hatch.linewidth": 0.5, 
     })
+
+
+def format_k(x, pos):
+    if x >= 1000:
+        v = x / 1000
+        return f"{int(v)}K" if v.is_integer() else f"{v:.1f}K"
+    return f"{int(x)}"
