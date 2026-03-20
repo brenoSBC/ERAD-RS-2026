@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include<iomanip>
 
 /*
  * This parser reads timestamps from the "stream" directory and calculates
@@ -78,6 +79,8 @@ void calculate_throughput(
     {
         std::string base_dir = read_file + name + config[i] + "/";
         std::ofstream write(write_file + name + "-" + config[i] + "-throughput.txt");
+
+        write << std::fixed << std::setprecision(8);
 
         for (int j = 1; j <= 10; ++j)
         {
