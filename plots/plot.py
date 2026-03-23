@@ -6,8 +6,16 @@ import plot_config
 
 
 def plot_app(application, pattern, name):
+
+    width = 0.24
+    gap = 0.01
+    
+    # posições base no eixo x (uma por configuração de paralelismo)
     x = np.arange(len(pattern))
-    fig, ax = plt.subplots(figsize=plot_config.FIG_SIZE)
+    
+    # fig = a imagem completa
+    # ax  = o sistema de eixos, onde os dados são plotados (barras, linhas...)
+    fig, ax = plt.subplots(figsize=(8, 4.5))           
 
     for i, fw in enumerate(frameworks):
 
@@ -20,40 +28,44 @@ def plot_app(application, pattern, name):
             stds.append(np.std(data))
         
         ax.bar(
-            x + i*(width + gap),                                                                                                                        # move cada framework para o lado
-            means,
-            width,
-            yerr=stds,                                                                                                                                   # barra de erro (std)
-            capsize=plot_config.std_capsize,                                                                                                                           # linha horizontal em cima e embaixo da linha de erro
-            label=plot_config.DISPLAY_NAME[fw],                                                                                                         # nome na legenda
-            facecolor=plot_config.SECOND_COLOR[fw],                                                                                          # cor interna da barra
-            edgecolor=plot_config.FIRST_COLOR[fw],                                                                                               # cor do hatch
-            error_kw=dict(ecolor=plot_config.ERROR_COLOR[fw], linewidth=plot_config.std_linewidth, capthick=plot_config.std_capthick),                # cor da linha de erro e espessura
-            hatch=plot_config.HATCH[fw],                                                                                                                  # tipo de hatch
-            linewidth=0.9,                                                                                                                                  # espessura da borda da barra
+            x + i*(width + gap),                                                                                                # desloca cada framework para o lado
+            means,                                                                                                              # altura das barras (média)
+            width=0.24,                                                                                                         # largura de cada barra
+            yerr=stds,                                                                                                          # tamanho da barra de erro (desvio padrão)
+            capsize=8,                                                                                                          # tamanho das linhas nas extremidades da barra de erro
+            label=plot_config.DISPLAY_NAME[fw],                                                                                 # nome na legenda
+            facecolor=plot_config.SECOND_COLOR[fw],                                                                             # cor de preenchimento da barra
+            edgecolor=plot_config.FIRST_COLOR[fw],                                                                              # cor da borda da barra e do hatch
+            error_kw=dict(
+                        ecolor=plot_config.ERROR_COLOR[fw],   # cor da barra de erro
+                        linewidth=0.6,                        # espessura da linha da barra de erro
+                        capthick=0.6                          # espessura das extremidades da barra de erro
+            ),   
+
+            hatch=plot_config.HATCH[fw],                                                                                        # tipo do hatch
+            linewidth=0.9,                                                                                                      # espessura da borda da barra
         )
 
-    # legenda no topo
-    ax.legend(plot_config.LEGEND_CONFIG)
+    ax.legend(**plot_config.LEGEND_CONFIG)                    # desenha a legenda
+ 
+    ax.set_xticks(x + width)                                  # define onde ficam os ticks no eixo X (posição dos labels)
+    ax.set_xticklabels(pattern)                               # define os nomes dos ticks (ex: "111", "121", ...)
 
-    ax.set_xticks(x + width)        
-    ax.set_xticklabels(pattern)
+    ax.set_xlabel("Configuração de paralelismo")              # nome do eixo X
+    ax.set_ylabel("Vazão [itens/s]")                          # nome do eixo Y
 
-    ax.set_xlabel("Configuração de paralelismo")
-    ax.set_ylabel("Vazão [itens/s]")
 
-    # formatter
-    # transforma milhares em 'K' - 70000 = 70K
+    # formata eixo Y para milhares (ex: 70000 → 70K)
     ax.yaxis.set_major_formatter(
         plt.FuncFormatter(plot_config.format_k)
     )
 
-    # grid
-    ax.grid(axis='y', linestyle="--", alpha=0.5)        # linhas pontilhadas para ajudar a ler os valores
-    ax.set_axisbelow(True)                              # grid fica atrás das barras
+    
+    ax.grid(axis='y', linestyle="--", alpha=0.5)         # grid, linhas pontilhadas para ajudar a ler os valores
+    ax.set_axisbelow(True)                               # garante que o grid fique atrás das barras
 
-    plt.tight_layout(rect=[0, 0, 1, 0.9])               # espaço pra legenda evita que coisas se sobreponham
-    plt.savefig(f"{name}.png", dpi=300)                      # salva imagem, dpi=300 qualidade alta
+    plt.tight_layout(rect=[0, 0, 1, 0.9])                # ajusta espaçamento automático (evita cortar legenda/títulos)
+    plt.savefig(f"{name}.png", dpi=300)                  # salva figura
     plt.close()     
 
 
@@ -71,9 +83,6 @@ patterns_tm = TM["patterns"]
 
 
 plot_config.apply()
-
-width = plot_config.width                                #largura de cada barra
-gap = plot_config.gap0
 
 frameworks = ["openmpi", "resipipe", "flink"]
 

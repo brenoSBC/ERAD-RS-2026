@@ -59,9 +59,3 @@ def format_k(x, pos):
     return f"{int(x)}"
 
 
-FIG_SIZE = (8, 4.5)
-width = 0.24
-gap = 0.01
-std_linewidth = 0.6
-std_capthick = 0.6
-std_capsize = 8
