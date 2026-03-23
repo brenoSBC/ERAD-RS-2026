@@ -18,3 +18,8 @@ g++ parsers/resipipe-parser.cpp        -Wall -Wextra -o bin/rp
 ./bin/fps
 ./bin/mp
 ./bin/rp
+
+python3 plots/fd.py
+python3 plots/sa.py
+python3 plots/sd.py
+python3 plots/tm.py
