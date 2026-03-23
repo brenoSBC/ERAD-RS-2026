@@ -1,34 +1,41 @@
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 
-COLORS = {
+FIRST_COLOR = {
     "openmpi": "#7CDE28",
     "resipipe": "#159CEB",
     "flink": "#F57C25",
 }
 
-BACK_COLORS = {
+SECOND_COLOR = {
     "openmpi": "#baffc9",
     "resipipe": "#bae1ff",
     "flink": "#ffdfba",
 }
 
-ERROS_COLORS = {
+ERROR_COLOR = {
     "openmpi": "#78CC2F",
     "resipipe": "#0766F5",
     "flink": "#F0501A" ,
 }
 
-HATCHES = {
+HATCH = {
     "openmpi": "//////\\\\\\\\\\\\",
     "resipipe": "//////\\\\\\\\\\\\",
     "flink": "//////\\\\\\\\\\\\",
 }
 
-DISPLAY_NAMES = {
+DISPLAY_NAME = {
     "openmpi": "OpenMPI",
     "resipipe": "ResiPipe",
     "flink": "Flink",
+}
+
+LEGEND_CONFIG = {
+    "loc": "upper center",
+    "bbox_to_anchor": (0.5, 1.2),
+    "ncol": 3,
+    "frameon": False,
 }
 
 def apply():
@@ -50,3 +57,11 @@ def format_k(x, pos):
         v = x / 1000
         return f"{int(v)}K" if v.is_integer() else f"{v:.1f}K"
     return f"{int(x)}"
+
+
+FIG_SIZE = (8, 4.5)
+width = 0.24
+gap = 0.01
+std_linewidth = 0.6
+std_capthick = 0.6
+std_capsize = 8

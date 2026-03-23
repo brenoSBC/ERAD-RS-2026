@@ -68,17 +68,18 @@ populate(SA, "SA")
 populate(SD, "SD")
 populate(TM, "TM")
 
-frameworks = ["flink", "openmpi", "resipipe"]
 
-for name, app in apps.items():
-    print(f"\n=== {name} ===")
+# frameworks = ["flink", "openmpi", "resipipe"]
+
+# for name, app in apps.items():
+#     print(f"\n=== {name} ===")
     
-    for fw in frameworks:
-        print(f"\n--- {fw} ---")
+#     for fw in frameworks:
+#         print(f"\n--- {fw} ---")
         
-        for i in range(len(app["patterns"])):
-            pattern = app["patterns"][i]
-            data = app[fw][i]
+#         for i in range(len(app["patterns"])):
+#             pattern = app["patterns"][i]
+#             data = app[fw][i]
             
-            print(f"{pattern}: {data}")
+#             print(f"{pattern}: {data}")
 
