@@ -8,7 +8,7 @@ import plot_config
 def plot_app(application, pattern, name):
 
     width = 0.24
-    gap = 0.01
+    gap = 0.015
     
     # posições base no eixo x (uma por configuração de paralelismo)
     x = np.arange(len(pattern))

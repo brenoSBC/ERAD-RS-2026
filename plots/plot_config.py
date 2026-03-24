@@ -2,19 +2,19 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 
 FIRST_COLOR = {
-    "openmpi": "#7CDE28",
+    "openmpi": "#52B352",
     "resipipe": "#159CEB",
     "flink": "#F57C25",
 }
 
 SECOND_COLOR = {
-    "openmpi": "#baffc9",
+    "openmpi": "#ABEBAB",
     "resipipe": "#bae1ff",
     "flink": "#ffdfba",
 }
 
 ERROR_COLOR = {
-    "openmpi": "#78CC2F",
+    "openmpi": "#00A600",
     "resipipe": "#0766F5",
     "flink": "#F0501A" ,
 }
@@ -57,5 +57,4 @@ def format_k(x, pos):
         v = x / 1000
         return f"{int(v)}K" if v.is_integer() else f"{v:.1f}K"
     return f"{int(x)}"
-
 
