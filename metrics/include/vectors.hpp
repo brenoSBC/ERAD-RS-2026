@@ -17,18 +17,17 @@ inline std::vector<std::vector<double>> sa_res;
 inline std::vector<std::vector<double>> sd_res;
 inline std::vector<std::vector<double>> tm_res;
 
+inline std::vector<double> fd_flink_mean;
+inline std::vector<double> sa_flink_mean;
+inline std::vector<double> sd_flink_mean;
+inline std::vector<double> tm_flink_mean;
 
-inline std::vector<std::vector<double>> fd_flink_mean;
-inline std::vector<std::vector<double>> sa_flink_mean;
-inline std::vector<std::vector<double>> sd_flink_mean;
-inline std::vector<std::vector<double>> tm_flink_mean;
+inline std::vector<double> fd_mpi_mean;
+inline std::vector<double> sa_mpi_mean;
+inline std::vector<double> sd_mpi_mean;
+inline std::vector<double> tm_mpi_mean;
 
-inline std::vector<std::vector<double>> fd_mpi_mean;
-inline std::vector<std::vector<double>> sa_mpi_mean;
-inline std::vector<std::vector<double>> sd_mpi_mean;
-inline std::vector<std::vector<double>> tm_mpi_mean;
-
-inline std::vector<std::vector<double>> fd_res_mean;
-inline std::vector<std::vector<double>> sa_res_mean;
-inline std::vector<std::vector<double>> sd_res_mean;
-inline std::vector<std::vector<double>> tm_res_mean;
+inline std::vector<double> fd_res_mean;
+inline std::vector<double> sa_res_mean;
+inline std::vector<double> sd_res_mean;
+inline std::vector<double> tm_res_mean;

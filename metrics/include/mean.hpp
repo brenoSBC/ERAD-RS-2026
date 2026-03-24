@@ -3,13 +3,16 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <iomanip>
 
-inline std::vector<std::vector<double>> mean(
+inline std::vector<double> mean(
     const std::string name,
     const std::string fw,
     const std::vector<std::vector<double>> &app_vector)
 {
-    std::vector<std::vector<double>> means;
+    std::cout << std::fixed << std::setprecision(8);
+    
+    std::vector<double> means;
 
     std::cout << "\n" << fw << " ########## MEAN PER CONFIG [ " << name << " ] ##########" << std::endl;
 
@@ -17,17 +20,16 @@ inline std::vector<std::vector<double>> mean(
     {
         double total = 0;
 
-        for (double n : app_vector[i])
+       for (size_t j = 0; j < app_vector[i].size(); ++j)
         {
-            total += n;
+            total += app_vector[i][j];
         }
 
         double m = total / app_vector[i].size();
 
-        means.push_back({m});
+        means.push_back(m);
 
         std::cout << "Config " << i + 1 << ": " << m << std::endl;
     }
-
     return means;
 }

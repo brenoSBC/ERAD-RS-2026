@@ -13,7 +13,6 @@ inline void populate_vector(
     const ::std::vector<std::string> config,
     std::vector<std::vector<double>> &app_vector)
 {
-
     std::cout << "\n" << fw << " ########## POPULATE VECTOR [ " << name << " ] ##########" << std::endl;
     std::string line;
 
