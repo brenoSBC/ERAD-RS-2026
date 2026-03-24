@@ -65,7 +65,7 @@ def plot_app(application, pattern, name):
     ax.set_axisbelow(True)                               # garante que o grid fique atrás das barras
 
     plt.tight_layout(rect=[0, 0, 1, 0.9])                # ajusta espaçamento automático (evita cortar legenda/títulos)
-    plt.savefig(f'graphs/{name}.png', dpi=300)           # salva figura
+    plt.savefig(f'graphs/{name}.pdf', dpi=300)           # salva figura
     plt.close()     
 
 
