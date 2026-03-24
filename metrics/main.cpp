@@ -32,20 +32,20 @@ int main(void)
     populate_vector("SD", "ResiPipe", file_res, four_operator_config, sd_res);
     populate_vector("TM", "ResiPipe", file_res, four_operator_config, tm_res);
 
-    double fd_flink_mean = mean("FD", "Flink", fd_flink);
-    double sa_flink_mean = mean("SA", "Flink", sa_flink);
-    double sd_flink_mean = mean("SD", "Flink", sd_flink);
-    double tm_flink_mean = mean("TM", "Flink", tm_flink);
+    // double fd_flink_mean = mean("FD", "Flink", fd_flink);
+    // double sa_flink_mean = mean("SA", "Flink", sa_flink);
+    // double sd_flink_mean = mean("SD", "Flink", sd_flink);
+    // double tm_flink_mean = mean("TM", "Flink", tm_flink);
 
-    double fd_mpi_mean = mean("FD", "OpenMPI",fd_mpi);
-    double sa_mpi_mean = mean("SA", "OpenMPI",sa_mpi);
-    double sd_mpi_mean = mean("SD", "OpenMPI",sd_mpi);
-    double tm_mpi_mean = mean("TM", "OpenMPI",tm_mpi);
+    // double fd_mpi_mean = mean("FD", "OpenMPI",fd_mpi);
+    // double sa_mpi_mean = mean("SA", "OpenMPI",sa_mpi);
+    // double sd_mpi_mean = mean("SD", "OpenMPI",sd_mpi);
+    // double tm_mpi_mean = mean("TM", "OpenMPI",tm_mpi);
 
-    double fd_res_mean = mean("FD", "ResiPipe", fd_res);
-    double sa_res_mean = mean("SA", "ResiPipe", sa_res);
-    double sd_res_mean = mean("SD", "ResiPipe", sd_res);
-    double tm_res_mean = mean("TM", "ResiPipe", tm_res);
+    // double fd_res_mean = mean("FD", "ResiPipe", fd_res);
+    // double sa_res_mean = mean("SA", "ResiPipe", sa_res);
+    // double sd_res_mean = mean("SD", "ResiPipe", sd_res);
+    // double tm_res_mean = mean("TM", "ResiPipe", tm_res);
 
     return 0;
 }

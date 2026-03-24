@@ -11,7 +11,7 @@ inline void populate_vector(
     const ::std::string fw,
     const ::std::string file,
     const ::std::vector<std::string> config,
-    std::vector<double> &app_vector)
+    std::vector<std::vector<double>> &app_vector)
 {
 
     std::cout << "\n" << fw << " ########## POPULATE VECTOR [ " << name << " ] ##########" << std::endl;
@@ -21,20 +21,21 @@ inline void populate_vector(
     {
         // std::cout << file << name << "-" << config[i] << "-throughput.txt" << std::endl;
         std::ifstream read(file + name + "-" + config[i] + "-throughput.txt");
-        
+
+        std::vector<double> temp;
+        std::cout << "Config: " << i+1 << std::endl;
+
         if (!read.is_open())
-            throw std::runtime_error("Error opening input file");
+                throw std::runtime_error("Error opening input file");
 
-        while (std::getline(read, line))
+        for (size_t j = 0; j < 10; ++j)
         {
-            app_vector.push_back(std::stod(line));
-            std::cout << "Value: " << line << std::endl; 
+            std::getline(read, line);
+
+            temp.push_back(std::stod(line));
+            std::cout << "Value: " << line << std::endl;
         }
+        app_vector.push_back(temp);
+        std::cout << "#######################################################" << std::endl;
     }
-    std::cout << "#######################################################" << std::endl;
 }
-
-
-
-
-
