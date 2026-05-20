@@ -5,3 +5,5 @@
 Em 2026, o evento será realizado em Bagé-RS, de 6 a 8 de Maio, nas instalações do Campus Bagé da UNIPAMPA, estrategicamente posicionada no bioma Pampa, na Campanha Gaúcha, região de fronteira, o que impulsiona o desafio de engajar instituições envolvidas com HPC nos três países vizinhos (Argentina, Paraguai e Uruguai). 
 
 [https://cradrs.github.io/eradrs2026/](https://cradrs.github.io/eradrs2026/)
+
+Você pode ler o artigo em: [https://cradrs.github.io/eradrs2026/pdfs/21414.pdf](https://cradrs.github.io/eradrs2026/pdfs/21414.pdf)
